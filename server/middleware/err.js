@@ -3,4 +3,4 @@ module.exports = function() {
 		console.log('This is the ' + err.stack);
 		res.status(500);
 	};
-}
+};

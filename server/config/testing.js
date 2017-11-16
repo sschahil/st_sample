@@ -1,6 +1,7 @@
 module.exports = {
 	logging: false,
+	seed: false,
 	db: {
-		url: 'mongodb://localhost/mmb-test'
+		url: 'mongodb://localhost/st-test'
 	}
 };

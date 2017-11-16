@@ -52,7 +52,7 @@ var cleanDB = function() {
 			return model.remove().exec();
 		});
 	return Promise.all(cleanPromises);
-}
+};
 
 var createGurdwaras = function(data) {
 	var promises = gurdwaras.map(function(gurdwara) {

@@ -1,6 +1,6 @@
 module.exports = {
 	logging: false,
 	// db: {
-	// 	url: 'mongod://localhost/mmb'
+	// 	url: 'mongod://localhost/st'
 	// }
 };

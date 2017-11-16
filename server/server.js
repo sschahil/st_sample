@@ -19,4 +19,10 @@ app.use(function(err, req, res, next) {
 	res.status(500).send('Oops');
 });
 
-module.exports = app;
+if(process.env.NODE_ENV === config.test) {
+	app.listen(config.port);
+	logger.log('listening on http://localhost: ' + config.port);
+}
+
+module.exports = app;	
+

@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var GurdwaraSchema = new Schema({
@@ -7,12 +7,12 @@ var GurdwaraSchema = new Schema({
 		required: true
 	},
 	address: {
-		type: String, 
+		type: String,
 		required: true,
 		unique: true
 	},
 	city: {
-		type: String, 
+		type: String,
 		required: true
 	},
 	state: {
@@ -35,4 +35,4 @@ var GurdwaraSchema = new Schema({
 	}
 });
 
-module.exports = mongoose.model('gurdwara', GurdwaraSchema);
+module.exports = mongoose.model("gurdwara", GurdwaraSchema);
