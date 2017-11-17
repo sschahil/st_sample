@@ -7,7 +7,7 @@ var config = {
 	port: process.env.PORT || 3000
 };
 
-process.env.NODE_ENV = process.env.NODE_ENV || config.test;
+process.env.NODE_ENV = process.env.NODE_ENV || config.dev;
 config.env = process.env.NODE_ENV;
 
 var envConfig;
