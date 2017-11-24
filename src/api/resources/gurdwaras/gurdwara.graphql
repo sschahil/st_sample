@@ -1,0 +1,47 @@
+type Gurdwara {
+    id: ID!
+    name: String!
+    address_1: String!
+    address_2: String
+    city: String!
+    state: String!
+    zipcode: Int!
+    country: String!
+    phoneNumber: Int!
+    email: String
+}
+
+input UpdatedGurdwara {
+    id: ID!
+    name: String
+    address_1: String
+    address_2: String
+    city: String
+    state: String
+    zipcode: Int
+    country: String
+    phoneNumber: Int
+    email: String
+}
+
+input newGurdwara {
+    name: String
+    address_1: String
+    address_2: String
+    city: String
+    state: String
+    zipcode: Int
+    country: String
+    phoneNumber: Int
+    email: String
+}
+
+type Query {
+    Gurdwara(id: ID!): Gurdwara!
+    allGurdwaras: [Gurdwara]!
+}
+
+type Mutation {
+    newGurdwara(input: newGurdwara!): Gurdwara!
+    updateGurdwara(input: UpdatedGurdwara!): Gurdwara!
+}
