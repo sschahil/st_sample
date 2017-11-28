@@ -12,17 +12,15 @@ module.exports = {
         alias: {
             '~/testhelpers': path.resolve(__dirname, 'test/helpers'),
             '~testhelpers': path.resolve(__dirname, 'test/helpers'),
-            '~apiSpecs': path.resolve(__dirname, 'test/apiSpecs'),
-            '~/apiSpecs': path.resolve(__dirname, 'test/apiSpecs'),
             '~/config': path.resolve(__dirname, 'src/config/index')
         }
     },
     devtool: 'cheap-module-source-map',
     externals: [nodeExternals()],
     module: {
-        rules: {
+        rules: [
             {
-                test /\.js?$/,
+                test: /\.js?$/,
                 use: [
                     {
                         loader: 'babel-loader',
@@ -49,6 +47,6 @@ module.exports = {
                     loader: 'raw-loader'
                 }
             }
-        }
+        ]
     }
 }
