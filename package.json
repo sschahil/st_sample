@@ -1,30 +1,43 @@
 {
-  "name": "mmb_express",
+  "name": "st_express_graphql",
   "version": "1.0.0",
-  "description": "Express, MongoDB, and ReactJS ",
+  "description": "Express Server with GraphQL and MongoDB",
   "main": "index.js",
+  "repository": "https://github.com/sschahil/st_sample",
+  "author": "sschahil",
+  "license": "MIT",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "mocha --timeout 10000"
+    "start": "webpack --colors --progress",
+    "test:unit": "SET NODE_ENV=testing rm -rf /tmp/mocha-webpack && mocha-webpack --webpack-config webpack.testing.js \"src/**/*.spec.js\" --timeout 10000 --require source-map-support/register",
+    "test": "npm run test:unit"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sschahil/mmb_sample/tree/express.git"
-  },
-  "author": "Sumant Chahil",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "colors": "^1.1.2",
+    "apollo-server-express": "^1.2.0",
+    "bcrypt": "^1.0.3",
     "express": "^4.16.2",
-    "lodash": "^4.17.4",
-    "mongoose": "^4.13.0",
-    "morgan": "^1.9.0"
+    "express-jwt": "^5.3.0",
+    "graphql": "^0.11.7",
+    "graphql-tools": "^2.8.0",
+    "jsonwebtoken": "^8.1.0",
+    "lodash.merge": "^4.6.0",
+    "mongoose": "^4.13.4"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
     "chai-http": "^3.0.0",
+    "graphql-tag": "^2.5.0",
     "mocha": "^4.0.1",
-    "supertest": "^3.0.0"
+    "mocha-webpack": "^1.0.1",
+    "raw-loader": "^0.5.1",
+    "source-map-support": "^0.5.0",
+    "start-server-webpack-plugin": "^2.2.0",
+    "webpack": "^3.8.1",
+    "webpack-node-externals": "^1.6.0"
   }
 }
