@@ -1,0 +1,37 @@
+{
+    "gurdwaras": [
+        {
+            "ID": "0",
+            "name": "San Jose Gurdwara",
+            "address": "3636 Murillo Ave",
+            "city": "San Jose",
+            "state": "CA",
+            "zipcode": "95148",
+            "country": "United States",
+            "phoneNumber": "(408) 274-9373",
+            "email": ""
+        },
+        {
+            "ID": "1",
+            "name": "Fremont Gurdwara",
+            "address": "300 Gurdwara Road",
+            "city": "Fremont",
+            "state": "CA",
+            "zipcode": "94536",
+            "country": "United States",
+            "phoneNumber": "(510) 790-0177",
+            "email": "fremontgs.it@gmail.com"
+        },
+        {
+            "ID": "2",
+            "name": "El Sobrante Gurdwara",
+            "address": "3550 Hillcrest Road",
+            "city": "El Sobrante",
+            "state": "CA",
+            "zipcode": "94803",
+            "country": "United States",
+            "phoneNumber": "(510) 223-1102",
+            "email": ""
+        }
+    ]
+}
