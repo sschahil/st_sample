@@ -1,19 +1,17 @@
-import express from 'express'
-import setupMiddware from './middleware'
-import { graphQLRouter } from './api'
-import { graphiqlExpress } from 'apollo-server-express'
-import { connect } from './db'
+import express from 'express';
+import setupMiddware from './middleware';
+import { graphQLRouter } from './api';
+import { graphiqlExpress } from 'apollo-server-express';
+import { connect } from './db';
+import cors from 'cors';
 
-const app = express()
+const app = express();
 
-setupMiddware(app)
-connect()
+setupMiddware(app);
+connect();
 
-app.use('/graphql', graphQLRouter)
-app.use('/docs', graphiqlExpress({ endpointURL: '/graphql' }))
+app.use('*', cors({ origin: 'http://localhost:8080' }));
+app.use('/graphql', graphQLRouter);
+app.use('/docs', graphiqlExpress({ endpointURL: '/graphql' }));
 
-app.all('*', (req, res) => {
-    res.json({ok: true})
-})
-
-export default app
+export default app;
