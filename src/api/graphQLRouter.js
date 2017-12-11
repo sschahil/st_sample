@@ -31,8 +31,6 @@ export const graphQLRouter = graphqlExpress((req) => ({
     schema, 
     context: {
         req,
-        user: req.user,
-        gurdwara: req.gurdwara,
-        geocode: req.geocode
+        user: req.user
     }
 }))
