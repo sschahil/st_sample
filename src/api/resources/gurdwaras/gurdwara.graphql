@@ -1,38 +1,38 @@
 type Gurdwara {
     id: ID!
-    name: String!
-    address_1: String!
-    address_2: String
+    name: String
+    addressLine1: String!
+    addressLine2: String
     city: String!
     state: String!
-    zipcode: Int!
-    country: String!
-    phoneNumber: Int!
+    zipcode: String
+    country: String
+    phoneNumber: String
     email: String
 }
 
 input UpdatedGurdwara {
     id: ID!
     name: String
-    address_1: String
-    address_2: String
+    addressLine1: String
+    addressLine2: String
     city: String
     state: String
-    zipcode: Int
+    zipcode: String
     country: String
-    phoneNumber: Int
+    phoneNumber: String
     email: String
 }
 
 input newGurdwara {
     name: String
-    address_1: String
-    address_2: String
+    addressLine1: String
+    addressLine2: String
     city: String
     state: String
-    zipcode: Int
+    zipcode: String
     country: String
-    phoneNumber: Int
+    phoneNumber: String
     email: String
 }
 
