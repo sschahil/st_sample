@@ -1,4 +1,4 @@
-import { User } from '../resources/gurdwara/gurdwara.model'
+import { User } from '../resources/users/user.model'
 import jwt from 'jsonwebtoken'
 import config from '../../config'
 import expressJwt from 'express-jwt'
@@ -44,7 +44,7 @@ export const verifyUser = () => (req, res, next) => {
         return
     }
 
-    User.findOne(username: username})
+    User.findOne({username: username})
         .then(function(user) {
             if(!user) {
                 res.status(401).send('No user with the given username')

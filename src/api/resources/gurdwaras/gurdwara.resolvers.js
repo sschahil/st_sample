@@ -1,5 +1,4 @@
-import { Gurdwara } from './gurdwara.model'
-import merge from 'lodash.merge'
+import{ Gurdwara } from './gurdwara.model'
 
 const getGurdwara = (_, {id}, {gurdwara}) => {
     return Gurdwara.findById(id).exec()
@@ -10,7 +9,7 @@ const allGurdwaras = () => {
 }
 
 const newGurdwara = (_, {input}) => {
-    return Gurdwara.create(input)
+    console.log(input.gurdwara)
 }
 
 const updateGurdwara = (_, {input}) => {
