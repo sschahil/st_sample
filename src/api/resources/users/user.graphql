@@ -10,10 +10,10 @@ input UpdatedUser {
   username: String!
 }
 
-extend type Query {
+type Query {
   getMe: User!
 }
 
-extend type Mutation {
+type Mutation {
   updateMe(input: UpdatedUser!): User!
 }

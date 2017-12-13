@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const gurdwaraSchema = new mongoose.Schema({
     name: {
         type: String,
-        // required: [true, 'Gurdwara must have  a name']
+        required: [true, 'Gurdwara must have  a name']
     },
     addressLine1: {
         type: String,
@@ -26,15 +26,24 @@ const gurdwaraSchema = new mongoose.Schema({
     },
     country: {
         type: String,
-        // required: [true, 'Gurdwara must have a country'],        
+        required: [true, 'Gurdwara must have a country'],        
     },
     phoneNumber: {
         type: String,
-        // required: [true, 'Gurdwara must have a phoneNumber'],
+        required: [true, 'Gurdwara must have a phoneNumber'],
     },
     email: {
         type: String,
+    },
+    latitude: {
+        type: String,
+        required: [true, 'Geocode must have a latitude']
+    },
+
+    longitude: {
+        type: String,
+        required: [true, 'Geocode must have a longitude']
     }
 })
 
-exports.Gurdwara = mongoose.model('gurdwara', gurdwaraSchema)
+export const Gurdwara = mongoose.model('Gurdwara', gurdwaraSchema)

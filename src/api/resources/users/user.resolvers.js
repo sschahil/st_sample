@@ -14,7 +14,8 @@ export const userResolvers = {
   Query: {
     getMe
   },
+  
   Mutation: {
     updateMe
-  },
+  }
 }
