@@ -12,6 +12,7 @@
     "test": "npm run test:unit"
   },
   "dependencies": {
+    "@google/maps": "^0.4.5",
     "apollo-server-express": "^1.2.0",
     "bcrypt": "^1.0.3",
     "express": "^4.16.2",

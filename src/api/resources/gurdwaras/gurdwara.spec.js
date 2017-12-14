@@ -10,13 +10,15 @@ describe('Gurdwara Smoke Test', () => {
         gurdwara = await Gurdwara.create (
             {
                 name: "TestGurdwara",
-                address_1: "111 TestAddr Street",
+                addressLine1: "111 TestAddr Street",
                 city: "TestCity",
                 state: "TestState",
                 zipcode: 12345,
                 country: "TestCountry",
                 phoneNumber: 1234567890,
-                email: "test@email.com"
+                email: "test@email.com",
+                latitude: "-125.00003",
+                longitude: "12.0003"
             }
         )
     })
@@ -31,13 +33,15 @@ describe('Gurdwara Smoke Test', () => {
                 Gurdwara(id: $id) {
                     id 
                     name
-                    address_1
+                    addressLine1
                     city
                     state
                     zipcode
                     country
                     phoneNumber
                     email
+                    latitude
+                    longitude
                 }
             }
             `, {id: gurdwara.id}, gurdwara)
